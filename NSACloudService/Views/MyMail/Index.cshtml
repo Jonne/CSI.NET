@@ -1,0 +1,24 @@
+﻿@model IEnumerable<NSACloudService.DL.MyMail>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+<table>
+    <thead>
+        <tr>
+            <td>Name</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var mail in Model)
+        {
+            <tr>
+                <td>@mail.Subject</td>
+            </tr>
+        }
+    </tbody>
+</table>
