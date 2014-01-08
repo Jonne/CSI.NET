@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
 using NSACloudService.DL;
 
@@ -15,10 +12,9 @@ namespace NSACloudService.Controllers
         public ActionResult Index()
         {
             var mailRepository = new MyMailRepository();
-            var mail = mailRepository.GetAll();
+            IEnumerable<MyMail> mail = mailRepository.GetAll();
 
             return View(mail);
         }
-
     }
 }

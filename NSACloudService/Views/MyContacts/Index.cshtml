@@ -1,0 +1,32 @@
+﻿@model IEnumerable<NSACloudService.DL.MyContact>
+
+@{
+    ViewBag.Title = "title";
+}
+<div class="page-header">
+    <h1>My Contacts</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-3"><img src="/Images/Logo.jpg" width="200" height="200" class="img-thumbnail" /></div>
+    <div class="col-md-9">
+        <div class="media-list">
+            @foreach (var contact in Model)
+            {
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="/Images/@contact.Image" alt="@contact.Name" height="75" width="75">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">@contact.Name</h4>
+                        ...
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+
+

@@ -3,22 +3,28 @@
 @{
     ViewBag.Title = "Index";
 }
+<div class="page-header">
+    <h1>My Mail</h1>
+</div>
+<div class="row">
+    <div class="col-md-3"><img src="/Images/Logo.jpg" width="200" height="200" class="img-thumbnail" /></div>
+    <div class="col-md-9">
+        <a href="#">Inbox <span class="badge">2</span></a>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>Subject</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var mail in Model)
+                {
+                    <tr>
+                        <td>@mail.Subject</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
 
-<h2>Index</h2>
-
-
-<table>
-    <thead>
-        <tr>
-            <td>Name</td>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var mail in Model)
-        {
-            <tr>
-                <td>@mail.Subject</td>
-            </tr>
-        }
-    </tbody>
-</table>
+    </div>
+</div>

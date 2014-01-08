@@ -3,23 +3,31 @@
 @{
     ViewBag.Title = "Index";
 }
+<div class="page-header">
+    <h1>My Files</h1>
+</div>
+<div class="row">
+    <div class="col-md-3"><img src="/Images/Logo.jpg" width="200" height="200" class="img-thumbnail" /></div>
+    <div class="col-md-9">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var file in Model)
+                {
+                    <tr>
+                        <td>@file.Name</td>
+                        <td>@Html.ActionLink("E-mail to friend", "SendLink", new { email = "obama@us.gov", myFileId = file.Id })</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
 
-<h2>Index</h2>
 
 
-<table>
-    <thead>
-        <tr>
-            <td>Name</td>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var file in Model)
-        {
-            <tr>
-                <td>@file.Name</td>
-                <td>@Html.ActionLink("E-mail to friend", "SendLink", new {email = "obama@us.gov", myFileId = file.Id})</td>
-            </tr>
-        }
-    </tbody>
-</table>
+

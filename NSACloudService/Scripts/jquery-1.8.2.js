@@ -1323,7 +1323,7 @@ jQuery.support = (function() {
 		// (WebKit defaults to false instead of true, IE too, if it's in an optgroup)
 		optSelected: opt.selected,
 
-		// Test setAttribute on camelCase class. If it works, we need attrFixes when doing get/setAttribute (ie6/7)
+		// MyFileModel setAttribute on camelCase class. If it works, we need attrFixes when doing get/setAttribute (ie6/7)
 		getSetAttribute: div.className !== "t",
 
 		// Tests for enctype support on a form(#6743)
@@ -1358,7 +1358,7 @@ jQuery.support = (function() {
 	select.disabled = true;
 	support.optDisabled = !opt.disabled;
 
-	// Test to see if it's possible to delete an expando from an element
+	// MyFileModel to see if it's possible to delete an expando from an element
 	// Fails in Internet Explorer
 	try {
 		delete div.test;
@@ -1629,7 +1629,7 @@ jQuery.extend({
 			// First Try to find as-is property data
 			ret = thisCache[ name ];
 
-			// Test for null|undefined property data
+			// MyFileModel for null|undefined property data
 			if ( ret == null ) {
 
 				// Try to find the camelCased property
@@ -3867,7 +3867,7 @@ var cachedruns,
 		div.innerHTML = "<a name='" + expando + "'></a><div name='" + expando + "'></div>";
 		docElem.insertBefore( div, docElem.firstChild );
 
-		// Test
+		// MyFileModel
 		var pass = document.getElementsByName &&
 			// buggy browsers will return fewer than the correct 2
 			document.getElementsByName( expando ).length === 2 +
