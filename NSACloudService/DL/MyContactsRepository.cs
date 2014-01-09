@@ -18,10 +18,12 @@ namespace NSACloudService.DL
 
             return new[]
             {
-                new MyContact {Id = 1, Name = "Barack Obama", Image = "obama.jpg"},
-                new MyContact {Id = 2, Name = "Yolanthe Cabau van Kasbergen", Image = "yolanthe.jpg"},
-                new MyContact {Id = 3, Name = "Dennis Doomen", Image = "Dennis.jpg"},
-                new MyContact {Id = 4, Name = "Bill Gates", Image = "Bill.jpg"}
+                new MyContact {Id = 1, Name = "Martin Fowler", Image = "fowler.jpg", Mail = "martinfowler@gmail.com", IsOnline = false},
+                new MyContact {Id = 2, Name = "Robert C. Martin", Image = "unclebob.jpg", Mail = "unclebob@cleancode.com", IsOnline = true},
+                new MyContact {Id = 3, Name = "Yolanthe Cabau van Kasbergen", Image = "yolanthe.jpg", Mail = "yolanthe@voetbalvrouwen.nl", IsOnline = true},
+                new MyContact {Id = 4, Name = "Dennis Doomen", Image = "Dennis.jpg", Mail = "dennis.doomen@avivasolutions.nl", IsOnline = false},
+                new MyContact {Id = 5, Name = "Bill Gates", Image = "Bill.jpg", Mail = "bill.gates@microsoft.com", IsOnline = false},
+                new MyContact {Id = 5, Name = "Steve Jobs", Image = "stevejobs.jpg", Mail = "steve.jobs@macintosh.com", IsOnline = null}
             };
         }
 
@@ -48,5 +50,7 @@ namespace NSACloudService.DL
         public int Id { get; set; }
         public string Name { get; set; }
         public string Image { get; set; }
+        public string Mail { get; set; }
+        public bool? IsOnline { get; set; }
     }
 }

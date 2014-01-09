@@ -19,7 +19,7 @@
                 @foreach (var file in Model)
                 {
                     <tr>
-                        <td>@file.Name</td>
+                        <td>@Html.ActionLink(file.Name, "View", new { fileId = file.Id })</td>
                         <td>@Html.ActionLink("E-mail to friend", "SendLink", new { email = "obama@us.gov", myFileId = file.Id })</td>
                     </tr>
                 }
