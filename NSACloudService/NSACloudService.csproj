@@ -153,9 +153,11 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MyFilesController.cs" />
     <Compile Include="Controllers\MyMailController.cs" />
+    <Compile Include="Controllers\MyPicturesController.cs" />
     <Compile Include="DL\MyContactsRepository.cs" />
     <Compile Include="DL\MyFileRepository.cs" />
     <Compile Include="DL\MyMailRepository.cs" />
+    <Compile Include="DL\MyPicturesRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -221,6 +223,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\thickbox.css" />
     <Content Include="favicon.ico" />
     <Content Include="Files\MyFile.txt" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -229,7 +232,15 @@
     <Content Include="Images\cloudbackup.jpg" />
     <Content Include="Images\dennis.jpg" />
     <Content Include="Images\fowler.jpg" />
+    <Content Include="Images\loadingAnimation.gif" />
     <Content Include="Images\Logo.jpg" />
+    <Content Include="Images\NSA\Backup.jpg" />
+    <Content Include="Images\NSA\Listens.jpg" />
+    <Content Include="Images\NSA\move.jpg" />
+    <Content Include="Images\NSA\Privacy.jpg" />
+    <Content Include="Images\NSA\Scan.jpg" />
+    <Content Include="Images\NSA\Troll.jpg" />
+    <Content Include="Images\NSA\Joke.png" />
     <Content Include="Images\stevejobs.jpg" />
     <Content Include="Images\unclebob.jpg" />
     <Content Include="Images\yolanthe.jpg" />
@@ -255,6 +266,7 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\thickbox.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -288,6 +300,7 @@
     <Content Include="Views\MyMail\Index.cshtml" />
     <Content Include="Views\MyFiles\View.cshtml" />
     <Content Include="Views\MyContacts\Index.cshtml" />
+    <Content Include="Views\MyPictures\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

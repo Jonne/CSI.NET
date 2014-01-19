@@ -1,0 +1,33 @@
+﻿@using NSACloudService.DL
+@model IEnumerable<MyPicture>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="page-header">
+    <h1>My Pictures</h1>
+</div>
+<div class="row">
+    <div class="col-md-3"><img src="/Images/Logo.jpg" width="150" height="150" class="img-thumbnail" /></div>
+    <div class="col-md-9">
+        <div class="media-list">
+            @foreach (MyPicture picture in Model)
+            {
+                <div class="media">
+
+                    <a href="@picture.Url" class="thickbox" title="@picture.Name">
+                        <img class="media-object" src="@picture.Url" alt="@picture.Name" height="75" width="75">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">@picture.Name</h4>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/thickbox")
+}
+
